@@ -10,53 +10,56 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {D:/Computer Architecture/registerfile.vhd}
+# vcom -93 -work work {D:/CMPS301-Computer-Architecture-Project/StackPointer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:33:19 on Dec 11,2024
-# vcom -reportprogress 300 -93 -work work D:/Computer Architecture/registerfile.vhd 
+# Start time: 23:43:54 on Dec 11,2024
+# vcom -reportprogress 300 -93 -work work D:/CMPS301-Computer-Architecture-Project/StackPointer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity registerfile
-# -- Compiling architecture registerfile_arch of registerfile
-# End time: 20:33:19 on Dec 11,2024, Elapsed time: 0:00:00
+# -- Compiling entity StackPointer
+# -- Compiling architecture StackPointer_arch of StackPointer
+# End time: 23:43:54 on Dec 11,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-do registerfile_Test.do
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:33:42 on Dec 11,2024
-# vcom -reportprogress 300 registerfile.vhdl 
-# ** Error: (vcom-7) Failed to open design unit file "registerfile.vhdl" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 20:33:42 on Dec 11,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./registerfile_Test.do line 3
-# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
-#     while executing
-# "vcom registerfile.vhdl"
-do registerfile_Test.do
-# vsim work.registerfile 
-# Start time: 20:34:19 on Dec 11,2024
+do StackPointer_Test.do
+# vsim work.StackPointer 
+# Start time: 23:44:09 on Dec 11,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.registerfile(registerfile_arch)
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /registerfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /registerfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 25 ns  Iteration: 1  Instance: /registerfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 25 ns  Iteration: 1  Instance: /registerfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 65 ns  Iteration: 1  Instance: /registerfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 105 ns  Iteration: 1  Instance: /registerfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 140 ns  Iteration: 2  Instance: /registerfile
-# End time: 20:37:53 on Dec 11,2024, Elapsed time: 0:03:34
-# Errors: 0, Warnings: 7
+# Loading work.stackpointer(stackpointer_arch)
+# ** Error: Invalid time value: # Set
+# Error in macro ./StackPointer_Test.do line 17
+# Invalid time value: # Set
+#     while executing
+# "force -freeze sim:/StackPointer/CLK '0'  # Set initial CLK state to low"
+do StackPointer_Test.do
+# End time: 23:45:17 on Dec 11,2024, Elapsed time: 0:01:08
+# Errors: 3, Warnings: 0
+# vsim work.StackPointer 
+# Start time: 23:45:17 on Dec 11,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.stackpointer(stackpointer_arch)
+# ** Error: Invalid time value: # Set
+# Error in macro ./StackPointer_Test.do line 17
+# Invalid time value: # Set
+#     while executing
+# "force -freeze sim:/StackPointer/CLK '0'  # Set initial CLK state to low"
+do StackPointer_Test.do
+# End time: 23:45:34 on Dec 11,2024, Elapsed time: 0:00:17
+# Errors: 3, Warnings: 0
+# vsim work.StackPointer 
+# Start time: 23:45:34 on Dec 11,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.stackpointer(stackpointer_arch)
+# End time: 23:53:08 on Dec 11,2024, Elapsed time: 0:07:34
+# Errors: 0, Warnings: 0

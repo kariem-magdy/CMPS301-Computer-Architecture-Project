@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Computer_Architecture_Project
-Wed Dec 11 20:39:48 2024
+Wed Dec 11 21:35:37 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,10 +36,10 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Wed Dec 11 20:39:48 2024           ;
+; Analysis & Elaboration Status ; Successful - Wed Dec 11 21:35:37 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; Computer_Architecture_Project               ;
-; Top-level Entity Name         ; instructionmemory                           ;
+; Top-level Entity Name         ; Flags                                       ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value                 ;
 +---------------------------------------------------------------------------------+--------------------+-------------------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                               ;
-; Top-level entity name                                                           ; instructionmemory  ; Computer_Architecture_Project ;
+; Top-level entity name                                                           ; Flags              ; Computer_Architecture_Project ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V                     ;
 ; Use smart compilation                                                           ; Off                ; Off                           ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                            ;
@@ -160,25 +160,25 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Dec 11 20:39:39 2024
+    Info: Processing started: Wed Dec 11 21:35:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Computer_Architecture_Project -c Computer_Architecture_Project --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file registerfile.vhd
-    Info (12022): Found design unit 1: registerfile-registerfile_arch File: D:/Computer Architecture/registerfile.vhd Line: 30
-    Info (12023): Found entity 1: registerfile File: D:/Computer Architecture/registerfile.vhd Line: 5
+    Info (12022): Found design unit 1: registerfile-registerfile_arch File: D:/CMPS301-Computer-Architecture-Project/registerfile.vhd Line: 30
+    Info (12023): Found entity 1: registerfile File: D:/CMPS301-Computer-Architecture-Project/registerfile.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-ALU_arch File: D:/Computer Architecture/ALU.vhd Line: 14
-    Info (12023): Found entity 1: ALU File: D:/Computer Architecture/ALU.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file instructionmemory.vhd
-    Info (12022): Found design unit 1: instructionmemory-instructionmemory_arch File: D:/Computer Architecture/instructionmemory.vhd Line: 16
-    Info (12023): Found entity 1: instructionmemory File: D:/Computer Architecture/instructionmemory.vhd Line: 5
-Error (10327): VHDL error at instructionmemory.vhd(28): can't determine definition of operator ""+"" -- found 0 possible definitions File: D:/Computer Architecture/instructionmemory.vhd Line: 28
-Error (10411): VHDL Type Conversion error at instructionmemory.vhd(28): can't determine type of object or expression near text or symbol "UNSIGNED" File: D:/Computer Architecture/instructionmemory.vhd Line: 28
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4838 megabytes
-    Error: Processing ended: Wed Dec 11 20:39:48 2024
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:08
+    Info (12022): Found design unit 1: ALU-ALU_arch File: D:/CMPS301-Computer-Architecture-Project/ALU.vhd Line: 14
+    Info (12023): Found entity 1: ALU File: D:/CMPS301-Computer-Architecture-Project/ALU.vhd Line: 5
+Info (12021): Found 0 design units, including 0 entities, in source file instructionmemory.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file flags.vhd
+    Info (12022): Found design unit 1: Flags-Flags_arch File: D:/CMPS301-Computer-Architecture-Project/Flags.vhd Line: 16
+    Info (12023): Found entity 1: Flags File: D:/CMPS301-Computer-Architecture-Project/Flags.vhd Line: 5
+Info (12127): Elaborating entity "Flags" for the top level hierarchy
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Wed Dec 11 21:35:37 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

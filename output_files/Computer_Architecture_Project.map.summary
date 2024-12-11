@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Wed Dec 11 20:39:48 2024
+Analysis & Elaboration Status : Successful - Wed Dec 11 21:35:37 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Computer_Architecture_Project
-Top-level Entity Name : instructionmemory
+Top-level Entity Name : Flags
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

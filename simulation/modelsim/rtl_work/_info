@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/CMPS301-Computer-Architecture-Project/simulation/modelsim
 Estackpointer
-Z1 w1733952620
+Z1 w1734352762
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -22,9 +22,9 @@ VWHl;JDaP=ecDlQ;hkPA`l1
 !s100 blej1n`53Mb14?Wb`]ehA3
 Z7 OV;C;10.5b;63
 31
-Z8 !s110 1733953434
+Z8 !s110 1734352811
 !i10b 1
-Z9 !s108 1733953434.000000
+Z9 !s108 1734352811.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|D:/CMPS301-Computer-Architecture-Project/StackPointer.vhd|
 Z11 !s107 D:/CMPS301-Computer-Architecture-Project/StackPointer.vhd|
 !i113 1
@@ -35,10 +35,10 @@ R2
 R3
 R4
 DEx4 work 12 stackpointer 0 22 WHl;JDaP=ecDlQ;hkPA`l1
-l20
+l17
 L15
-V?FLzz0Pc?83o`b1MD@Doa0
-!s100 HJXiaAE3619LQ6;6lzR`o3
+Vb`m8gLbnh3E3B8Jgl=@?N2
+!s100 zQ;Rf[H;6aWanB<dej0L_3
 R7
 31
 R8

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Mon Dec 16 13:51:15 2024
+Analysis & Elaboration Status : Successful - Mon Dec 16 14:39:47 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Computer_Architecture_Project
-Top-level Entity Name : registerfile
+Top-level Entity Name : StackPointer
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

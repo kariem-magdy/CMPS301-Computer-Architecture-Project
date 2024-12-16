@@ -8,37 +8,37 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/CMPS301-Computer-Architecture-Project/simulation/modelsim
-Eregisterfile
-Z1 w1734349862
+Estackpointer
+Z1 w1734352762
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z5 8D:/CMPS301-Computer-Architecture-Project/registerfile.vhd
-Z6 FD:/CMPS301-Computer-Architecture-Project/registerfile.vhd
+Z5 8D:/CMPS301-Computer-Architecture-Project/StackPointer.vhd
+Z6 FD:/CMPS301-Computer-Architecture-Project/StackPointer.vhd
 l0
 L5
-VNl;e]<X`m5kBQEo<?3f@83
-!s100 B@cE[daEGga24K]BeE]:z0
+VWHl;JDaP=ecDlQ;hkPA`l1
+!s100 blej1n`53Mb14?Wb`]ehA3
 Z7 OV;C;10.5b;63
 31
-Z8 !s110 1734349889
+Z8 !s110 1734352811
 !i10b 1
-Z9 !s108 1734349889.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|D:/CMPS301-Computer-Architecture-Project/registerfile.vhd|
-Z11 !s107 D:/CMPS301-Computer-Architecture-Project/registerfile.vhd|
+Z9 !s108 1734352811.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/CMPS301-Computer-Architecture-Project/StackPointer.vhd|
+Z11 !s107 D:/CMPS301-Computer-Architecture-Project/StackPointer.vhd|
 !i113 1
 Z12 o-93 -work work
 Z13 tExplicit 1 CvgOpt 0
-Aregisterfile_arch
+Astackpointer_arch
 R2
 R3
 R4
-DEx4 work 12 registerfile 0 22 Nl;e]<X`m5kBQEo<?3f@83
-l35
-L30
-VmoKT`5KS3_nM]onDAZS0@2
-!s100 ^Je8V;TzZ0n>zaQlk=zDE2
+DEx4 work 12 stackpointer 0 22 WHl;JDaP=ecDlQ;hkPA`l1
+l17
+L15
+Vb`m8gLbnh3E3B8Jgl=@?N2
+!s100 zQ;Rf[H;6aWanB<dej0L_3
 R7
 31
 R8

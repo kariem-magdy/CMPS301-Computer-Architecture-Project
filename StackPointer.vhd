@@ -13,37 +13,22 @@ ENTITY StackPointer IS
 END ENTITY StackPointer;
 
 ARCHITECTURE StackPointer_arch OF StackPointer IS
-    SIGNAL SP      : STD_LOGIC_VECTOR(15 DOWNTO 0);
-    SIGNAL SP_INC_VAL : STD_LOGIC_VECTOR(15 DOWNTO 0);
-    SIGNAL SP_DEC_VAL : STD_LOGIC_VECTOR(15 DOWNTO 0);
-    
+    SIGNAL SP : UNSIGNED(15 DOWNTO 0) := x"0FFF";
 BEGIN
 
     PROCESS (CLK, RST)
     BEGIN
         IF RST = '1' THEN
-            SP <= x"FFFE";  
+            SP <= x"0FFF";
         ELSIF rising_edge(CLK) THEN
-            IF SP_INC = '1' THEN
-                SP <= SP_INC_VAL;
-            ELSIF SP_DEC = '1' THEN
-                SP <= SP_DEC_VAL;
+            IF SP_INC = '1' AND SP_DEC = '0' THEN
+                SP <= SP + 2;
+            ELSIF SP_DEC = '1' AND SP_INC = '0' THEN
+                SP <= SP - 2;
             END IF;
         END IF;
     END PROCESS;
 
-    SP_INC_VAL <= std_logic_vector(unsigned(SP) + 2);
-    SP_DEC_VAL <= std_logic_vector(unsigned(SP) - 2);
-
-    PROCESS (SP, SP_INC, SP_DEC)
-    BEGIN
-        IF SP_DEC = '1' THEN
-            SP_OUTPUT <= SP;
-        ELSIF SP_INC = '1' THEN
-            SP_OUTPUT <= SP_INC_VAL;
-        ELSE
-            SP_OUTPUT <= SP;
-        END IF;
-    END PROCESS;
+    SP_OUTPUT <= STD_LOGIC_VECTOR(SP);
 
 END StackPointer_arch;

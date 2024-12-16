@@ -1,48 +1,74 @@
+# Load the design
 vsim work.registerfile
 
-# Add all signals to waveform
+# Add signals to the waveform
+add wave -format hex sim:/registerfile/CLK
+add wave -format hex sim:/registerfile/RST
+add wave -format hex sim:/registerfile/Rsrc1
+add wave -format hex sim:/registerfile/Rsrc2
+add wave -format hex sim:/registerfile/Rsrc1Data
+add wave -format hex sim:/registerfile/Rsrc2Data
+add wave -format hex sim:/registerfile/WE
+add wave -format hex sim:/registerfile/Rdst
+add wave -format hex sim:/registerfile/RdstData
+add wave -format hex sim:/registerfile/R0
+add wave -format hex sim:/registerfile/R1
+add wave -format hex sim:/registerfile/R2
+add wave -format hex sim:/registerfile/R3
+add wave -format hex sim:/registerfile/R4
+add wave -format hex sim:/registerfile/R5
+add wave -format hex sim:/registerfile/R6
+add wave -format hex sim:/registerfile/R7
+
 add wave -position insertpoint sim:/registerfile/*
 
-# Set up initial conditions
-force CLK 0 0ns, 1 5ns -repeat 10ns
-force RST 1 0ns
-run 20ns
-force RST 0 0ns
+# Initialize clock
+force -freeze sim:/registerfile/CLK 0 0ns, 1 {10ns} -repeat 20ns
 
-# Testcase 1: Write to Register 1 and Read from it
-force WE1 1
-force Rdst1 "001"
-force RdstData1 x"1234"
+# Testcase 1: Reset the register file
+force -freeze sim:/registerfile/RST 1
+force -freeze sim:/registerfile/WE 0
 run 20ns
 
-# Read Register 1
-force WE1 0
-force Rsrc1 "001"
+# Deassert reset
+force -freeze sim:/registerfile/RST 0
 run 20ns
 
-# Testcase 2: Write to Register 3 and Read from it
-force WE1 1
-force Rdst1 "011"
-force RdstData1 x"ABCD"
+# Testcase 2: Write to register 0
+force -freeze sim:/registerfile/WE 1
+force -freeze sim:/registerfile/Rdst "000"
+force -freeze sim:/registerfile/RdstData x"AAAA"
 run 20ns
 
-# Read Register 3
-force WE1 0
-force Rsrc1 "011"
+# Testcase 3: Write to register 1
+force -freeze sim:/registerfile/Rdst "001"
+force -freeze sim:/registerfile/RdstData x"BBBB"
 run 20ns
 
-# Testcase 3: Write to Register 5 and Read from it
-force WE1 1
-force Rdst1 "101"
-force RdstData1 x"FFFF"
+# Testcase 4: Write to register 2
+force -freeze sim:/registerfile/Rdst "010"
+force -freeze sim:/registerfile/RdstData x"CCCC"
 run 20ns
 
-# Read Register 5
-force WE1 0
-force Rsrc1 "101"
+# Testcase 5: Read from registers 0 and 1
+force -freeze sim:/registerfile/WE 0
+force -freeze sim:/registerfile/Rsrc1 "000"
+force -freeze sim:/registerfile/Rsrc2 "001"
 run 20ns
 
-# Testcase 4: Reset the Register File
-force RST 1
+# Testcase 6: Read from registers 2 and 0
+force -freeze sim:/registerfile/Rsrc1 "010"
+force -freeze sim:/registerfile/Rsrc2 "000"
 run 20ns
-force RST 0
+
+# Testcase 7: Write to register 7
+force -freeze sim:/registerfile/WE 1
+force -freeze sim:/registerfile/Rdst "111"
+force -freeze sim:/registerfile/RdstData x"FFFF"
+run 20ns
+
+# Testcase 8: Read from registers 7 and 1
+force -freeze sim:/registerfile/WE 0
+force -freeze sim:/registerfile/Rsrc1 "111"
+force -freeze sim:/registerfile/Rsrc2 "001"
+run 20ns

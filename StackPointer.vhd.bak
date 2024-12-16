@@ -23,7 +23,7 @@ BEGIN
     BEGIN
         IF RST = '1' THEN
             SP <= x"FFFE";  
-        ELSIF rising_edge(CLK) THEN
+        ELSIF RISING_EDGE(CLK) THEN
             IF SP_INC = '1' THEN
                 SP <= SP_INC_VAL;
             ELSIF SP_DEC = '1' THEN
